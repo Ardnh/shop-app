@@ -1,6 +1,5 @@
-package com.example.shopapp.ui.theme
+package com.example.shopapp.app.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
