@@ -1,6 +1,6 @@
 package com.example.shopapp.features.auth.di.binds
 
-import com.example.shopapp.features.auth.data.remote.AuthApiService
+import com.example.shopapp.features.auth.data.remote.AuthRemoteDataSource
 import com.example.shopapp.features.auth.data.remote.AuthRemoteDataSourceImpl
 import dagger.Binds
 import dagger.Module
@@ -13,5 +13,5 @@ import javax.inject.Singleton
 abstract class AuthBinds {
     @Binds
     @Singleton
-    abstract fun bindAuthRemoteDataSource(impl : AuthRemoteDataSourceImpl) : AuthApiService
+    abstract fun bindAuthRemoteDataSource(impl : AuthRemoteDataSourceImpl) : AuthRemoteDataSource
 }

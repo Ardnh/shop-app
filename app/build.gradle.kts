@@ -63,6 +63,8 @@ dependencies {
     implementation(libs.converter.gson)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.hilt.android)
+    implementation(libs.material.icons.extended)
+
     kapt(libs.hilt.compiler)
 
 }
