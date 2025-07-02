@@ -13,15 +13,19 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
-    private const val BASE_URL = "https://api.escuelajs.co/api/v1"
+    // Move to .env
+    private const val BASE_URL = "https://api.escuelajs.co/api/v1/"
 
     @Provides
     @Singleton
-    fun provideOKHttpClient(): OkHttpClient = OkHttpClient.Builder().build()
+    fun provideOKHttpClient(): OkHttpClient = OkHttpClient
+        .Builder()
+        .build()
 
     @Provides
     @Singleton
-    fun provideApi(client: OkHttpClient): Retrofit = Retrofit.Builder()
+    fun provideApi(client: OkHttpClient): Retrofit = Retrofit
+        .Builder()
         .baseUrl(BASE_URL)
         .client(client)
         .addConverterFactory(GsonConverterFactory.create())
